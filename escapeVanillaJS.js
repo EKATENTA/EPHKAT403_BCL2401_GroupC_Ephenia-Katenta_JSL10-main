@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function findMostRecentBook(books) {
   // 🪲 Bug: Logic error
   return books.reduce((mostRecent, book) =>
-    new Date(book.published) < new Date(mostRecent.published)
+    new Date(book.published) > new Date(mostRecent.published)
       ? book
       : mostRecent
   );

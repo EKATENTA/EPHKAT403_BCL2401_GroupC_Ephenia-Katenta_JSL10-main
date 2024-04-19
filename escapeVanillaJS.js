@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("directions.json")
       .then((response) => response.json())
       .then(async(directions) => {
-        navigateLabyrinth(directions).then((message) => {
+        await navigateLabyrinth(directions).then((message) => {
           // 🪲 Bug: Incorrect method
           document.getElementById("room3Result").innerHTML = message;
         });

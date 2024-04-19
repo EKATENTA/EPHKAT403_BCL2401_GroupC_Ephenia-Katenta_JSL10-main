@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function findMostRecentBook(books) {
-  // 🪲 Bug: Logic error
+  // Adjusted the findMostRecentBook  function to correctly compare dates and find the most recent book
   return books.reduce((mostRecent, book) =>
     new Date(book.published) > new Date(mostRecent.published)
       ? book
@@ -48,15 +48,15 @@ function findMostRecentBook(books) {
 }
 
 function findIntersection(setA, setB) {
-  // 🪲 Bug: Incorrect logic
-  const intersection = new Set ([...setA].filter((x) => setB.has(x)));
+  // Fixed the findIntersection function to correctly determine the intersection of two sets
+  const intersection = new Set([...setA].filter((x) => setB.has(x)));
   return intersection;
 }
 
 async function navigateLabyrinth(directions) {
   for (let direction of directions) {
-    // 🪲 Bug: No delay
-   await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Added the await keyword before the new Promise in the navigateLabyrinth function
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(`Navigating: ${direction.step}`);
   }
   return "Congratulations! You've mastered the essentials of Vanilla JavaScript. Welcome to the world of React, where you'll build powerful and dynamic web applications. Let's dive in!";

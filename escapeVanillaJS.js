@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const mostRecentBook = findMostRecentBook(books);
         // 🪲 Bug: Incorrect element ID
         document.getElementById(
-          "resultRoom1"
+          "room1Result"
         ).textContent = `The key to the next room is: ${mostRecentBook.title}`;
       });
   });
